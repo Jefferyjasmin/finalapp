@@ -1,18 +1,17 @@
-import React, { useState, useEffect } from "react";
+// const handleClick = (e)=>{
 
-const No_name = () => {
-	//for new todo
-	const [userName, setUsername] = useState({});
-	//for our previous todos
-	const [budget, setBudget] = useState([
-		// { todo: "todo 1" },
-    ])
+//     return(
 
-    const [debt,setDebt] = useState({})
-
-    const [expenses,setExpenses] = useState({})
-
-    const [income,setIncome] = useState({})
-}
-
-?
+//     <>
+// 			<div className="todo">
+// 				<h5>{todo.label}</h5>
+// 				<button
+// 					className="btn-delete"
+// 					onClick={() => deleteTodo(todo.id)}>
+// 					Delete
+// 				</button>
+// 			</div>
+// 			<div className="line" />
+// 		</>
+//     )
+// }

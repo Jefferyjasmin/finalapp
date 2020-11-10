@@ -3,8 +3,64 @@
 
 
 */
-
-.inputFields{
-    display:flex;
-    flex-direction: column
+.body{
+    margin: 0px;
+    background-color: black;
 }
+
+
+
+ 
+.h-100 {
+    background-color: lightgray;
+}
+
+
+.intro{
+    
+    background-image: url("https://savvytokyo.scdn3.secure.raxcdn.com/app/uploads/2019/10/Argentum-Wealth-Financial-Advisement-790x445.jpg");
+    height: 300px;
+    width: 100%;
+    background-repeat: no-repeat;
+    margin-left: 335px;
+    
+}
+    
+    
+
+
+
+
+
+.travelImg{
+    margin-left: 125px;
+    margin-top: 0px;
+    height: 300px;
+    width: 100%;
+
+}
+
+#img{
+
+    height: 100%;
+    width: 100%
+    
+}
+
+input[id=firstpage]{
+    background-color: lightgray;
+    
+}
+
+.inputField{
+     margin: 0 auto
+}
+
+
+.expense{
+    display: flex;
+    flex-direction: column;
+    justify-content: center
+}
+
+ 
