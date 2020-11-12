@@ -14,6 +14,8 @@ import Expense from "./component/expense";
 import { Navbar } from "./component/navbar";
 import { Footer } from "./component/footer";
 import Travel from "./views/travel";
+import Login from "./component/login";
+import Firstpage from "./views/firstpage";
 //create your first component
 const Layout = () => {
 	//the basename is used when your project is published in a subdirectory and not in the root of the domain
@@ -28,6 +30,10 @@ const Layout = () => {
 
 					<Switch>
 						<Route exact path="/">
+							<Login />
+						</Route>
+
+						<Route exact path="/home">
 							<div className="intro" />
 
 							<Home />

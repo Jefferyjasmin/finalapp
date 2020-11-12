@@ -1,6 +1,8 @@
 const getState = ({ getStore, getActions, setStore }) => {
 	return {
 		store: {
+			userName: "",
+			email: "",
 			mStatement: [],
 			income: 0,
 			expenses: [{ property: "car payment", value: 196 }, { property: "payment Rent", value: 1000 }]
@@ -40,7 +42,12 @@ const getState = ({ getStore, getActions, setStore }) => {
 				return monthly;
 			},
 
-			annualStatement: () => {
+			update: (userName, email, income) => {
+				const store = getStore();
+				setStore({ income: parseInt(income), email: email, userName: userName });
+			},
+
+			annualStatemen: () => {
 				const store = getStore();
 			},
 
@@ -49,17 +56,13 @@ const getState = ({ getStore, getActions, setStore }) => {
 			},
 
 			addExpense: array => {
-				console.log(array);
 				let store = getStore();
-				console.log(store);
 
 				let newArray = store.expenses.concat(array);
-				console.log(newArray);
+
 				setStore({ expenses: newArray });
 			},
-			deleteItem: index => {
-				console.log("delete");
-			}
+			deleteItem: index => {}
 		}
 	};
 };

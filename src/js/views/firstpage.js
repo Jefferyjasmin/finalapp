@@ -10,7 +10,7 @@ const Information = () => {
 		<div>
 			<div className="expense1 ">
 				<h1 id="h2home">
-					<b>Welcoome Jeffery Jasmin</b>
+					<b>Welcome {store.userName}</b>
 				</h1>
 				<div className="fistIncome">
 					<p id="ptag">
@@ -24,16 +24,16 @@ const Information = () => {
 					id="firstpage"
 					type="number"
 					placeholder="Enter your net pay"
-					value={income}
-					onChange={e => setIncome(e.target.value)}
+					value={store.income}
+					// onChange={e => setIncome(e.target.value)}
 				/>
 			</div>
 			<div>
 				<Link to="/expense" className="btn btn-dark">
-					<button
-						onClick={() => {
-							actions.setIncome(parseInt(income));
-						}}>
+					<button>
+						{/* // onClick={() => {
+						// 	actions.setIncome(parseInt(income));
+						// }}> */}
 						Enter
 					</button>
 				</Link>
