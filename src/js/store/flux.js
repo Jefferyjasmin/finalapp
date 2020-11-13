@@ -1,6 +1,8 @@
 const getState = ({ getStore, getActions, setStore }) => {
 	return {
 		store: {
+			apiBaseUrl: "https://3000-e4d0fe23-793c-4bec-96ad-382f1171d5ec.ws-us02.gitpod.io/",
+			id: "",
 			userName: "",
 			email: "",
 			mStatement: [],
@@ -42,9 +44,35 @@ const getState = ({ getStore, getActions, setStore }) => {
 				return monthly;
 			},
 
-			update: (userName, email, income) => {
+			update: async (userName, email, income) => {
 				const store = getStore();
-				setStore({ income: parseInt(income), email: email, userName: userName });
+				let url = store.apiBaseUrl + "user";
+				try {
+					let response = await fetch(url, {
+						method: "POST",
+						body: JSON.stringify({
+							userName: userName,
+							email: email,
+							income: income
+						}),
+						headers: {
+							"Content-Type": "application/json"
+						}
+					});
+					if (response.ok) {
+						let user = await response.json();
+						setStore({
+							income: parseInt(user.income),
+							email: user.email,
+							userName: user.user_name,
+							id: user.id
+						});
+						return true;
+					}
+				} catch (error) {
+					console.log(`this is the error: ${typeof error} ${error.message}`);
+				}
+				return false;
 			},
 
 			annualStatemen: () => {

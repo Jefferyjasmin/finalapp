@@ -1,13 +1,13 @@
 import React, { useContext, useState } from "react";
 import { Context } from "../store/appContext";
-import { Link } from "react-router-dom";
+import { Link, useHistory } from "react-router-dom";
 
 const Login = () => {
 	const { store, actions } = useContext(Context);
 	const [email, setEmail] = useState("");
 	const [userName, setUserName] = useState("");
 	const [income, setIncome] = useState(0);
-
+	const history = useHistory();
 	return (
 		<div>
 			<form>
@@ -50,15 +50,21 @@ const Login = () => {
 					</div>
 				</div>
 			</form>
-			<Link to="/home">
-				<button
-					onClick={() => {
-						actions.update(userName, email, parseInt(income));
-					}}>
-					{" "}
-					Submit
-				</button>
-			</Link>
+			{/* <Link to="/home"> */}
+			<button
+				type="button"
+				onClick={async () => {
+					let success = await actions.update(userName, email, parseInt(income));
+					if (success) {
+						history.push("/home");
+					} else {
+						alert("error");
+					}
+				}}>
+				{" "}
+				Submit
+			</button>
+			{/* </Link> */}
 		</div>
 	);
 };
