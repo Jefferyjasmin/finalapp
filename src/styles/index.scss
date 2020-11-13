@@ -12,7 +12,7 @@
 
  
 .h-100 {
-    background-color: lightgray;
+    background-color: steelblue;
 }
 
 
@@ -60,47 +60,56 @@ input[id=firstpage]{
     justify-content: center
 }
 
- 
+//  ---------------------------------------------------------login----------------------------------------------------------------------
+// ---------------------email------------------------
 .email{
     position: relative;
 }
 
 
 input[id=staticEmail]{
-    padding-left: 40px;
-
+    padding-left: 30px;
+    margin-left: 50px;
+    border-radius: 5px;
 }
 
 
 .email i{
     position: absolute;
-    left: 65px;
+    left: 95px;
     right: 30;
     top: 7px;
+    // transition: 2s;
 
 }
 
+// .email input[id=staticEmail]:focus + i{
+//     color:dodgerblue;
+// }
 
+// ---------------------email------------------------
+// ---------------------user------------------------
 .user{
     position: relative;
 }
 
 
 input[id=userName]{
-    padding-left: 20px;
-
+    padding-left: 25px;
+    margin-left: 2px;
+    border-radius: 5px;
 }
 
 
 .user i{
     position: absolute;
-    left: 100px;
+    left: 96px;
     right: 30;
     top: 7px;
 
 }
-
-
+// ---------------------user------------------------
+// ---------------------income------------------------
 
 .incomeField{
     position: relative;
@@ -111,15 +120,21 @@ input[id=userName]{
 input[id=userincome]{
     padding-left: 20px;
     width: 200px;
-    height: 30px;
+    height: 27px;
+    margin-left: 35px;
+
 
 }
 
 
 .incomeField i{
     position: absolute;
-    
+    left: 93px;
     right: 30;
-    top: 40px;
+    top: 7px;
 
 }
+// ---------------------income------------------------
+
+ 
+// ----------------------------------------------------login----------------------------------------------------------------------------
