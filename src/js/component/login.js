@@ -10,13 +10,18 @@ const Login = () => {
 	const history = useHistory();
 	return (
 		<div>
+			<h1>Create Your Account </h1>
+			<p>
+				<i className="fas fa-user-alt" />
+			</p>
 			<form>
-				<div className="form-group row">
-					<div className="col-sm-10">
-						<label id="staticEmail">User Name</label>
+				<div className="userdiv form-group row">
+					<div className="user col-sm-10">
+						<label id="userName">User Name</label>
+						<i className="far fa-user" />
 						<input
 							type="text"
-							id="staticEmail"
+							id="userName"
 							placeholder="Username"
 							value={userName}
 							onChange={e => setUserName(e.target.value)}
@@ -24,9 +29,10 @@ const Login = () => {
 					</div>
 				</div>
 
-				<div className="form-group row">
-					<div className="col-sm-10">
+				<div className="emaildiv form-group row">
+					<div className="email col-sm-10">
 						<label id="staticEmail">Email</label>
+						<i className="far fa-envelope" />
 						<input
 							type="text"
 							id="staticEmail"
@@ -36,17 +42,19 @@ const Login = () => {
 						/>
 					</div>
 				</div>
-				<div className="form-group row">
-					<div className="col-sm-10">
-						<label id="inputPassword">Income</label>
+				<div className="incomediv form-group row">
+					<div className="incomeField col-sm-10">
+						<label id="labelincome">Income</label>
+
 						<input
+							id="userincome"
 							type="number"
 							className="form-control"
-							id="inputPassword"
 							placeholder="Income"
 							value={income}
 							onChange={e => setIncome(e.target.value)}
 						/>
+						<i className="fas fa-dollar-sign" />
 					</div>
 				</div>
 			</form>

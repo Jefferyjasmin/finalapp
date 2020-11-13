@@ -52,10 +52,7 @@ input[id=firstpage]{
     
 }
 
-.inputField{
-     margin: 0 auto
-}
-
+ 
 
 .expense{
     display: flex;
@@ -64,3 +61,65 @@ input[id=firstpage]{
 }
 
  
+.email{
+    position: relative;
+}
+
+
+input[id=staticEmail]{
+    padding-left: 40px;
+
+}
+
+
+.email i{
+    position: absolute;
+    left: 65px;
+    right: 30;
+    top: 7px;
+
+}
+
+
+.user{
+    position: relative;
+}
+
+
+input[id=userName]{
+    padding-left: 20px;
+
+}
+
+
+.user i{
+    position: absolute;
+    left: 100px;
+    right: 30;
+    top: 7px;
+
+}
+
+
+
+.incomeField{
+    position: relative;
+    
+}
+
+
+input[id=userincome]{
+    padding-left: 20px;
+    width: 200px;
+    height: 30px;
+
+}
+
+
+.incomeField i{
+    position: absolute;
+    
+    right: 30;
+    top: 40px;
+
+}
