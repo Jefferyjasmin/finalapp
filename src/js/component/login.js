@@ -9,9 +9,12 @@ const Login = () => {
 	const [income, setIncome] = useState(0);
 	const history = useHistory();
 	return (
-		<div className="userLogin d-flex">
-			<div>
-				<img src="https://www.nevistas.com/ul/4/2019/08/29/13.jpg" />
+		<div className="userLogin d-flex justify-content-around ">
+			<div className="imgdiv">
+				<img
+					id="loginImg"
+					src="https://thumbs.dreamstime.com/b/glass-jar-coins-bills-beach-against-sunset-concept-accumulation-money-travel-glass-jar-159993024.jpg"
+				/>
 			</div>
 			<div className="loginRight">
 				<h1>Create Your Account </h1>
@@ -21,7 +24,7 @@ const Login = () => {
 						<div className="user">
 							<label id="userName">
 								{" "}
-								<b>User Name</b>e
+								<b>User Name</b>
 							</label>
 							<i className="far fa-user" />
 							<input
@@ -55,7 +58,6 @@ const Login = () => {
 							<label id="labelincome">
 								<b>Income</b>
 							</label>
-
 							<input
 								id="userincome"
 								type="number"
@@ -90,3 +92,10 @@ const Login = () => {
 };
 
 export default Login;
+
+// <div className="input-group mb-3">
+// 								<div className="input-group-prepend">
+// 									<span className="input-group-text">$</span>
+// 								</div>
+// 							</div>
+// 							<input type="text" className="form-control" aria-label="Amount (to the nearest dollar)" />

@@ -8,12 +8,10 @@
     background-color: black;
 }
 
-
-
- 
-.h-100 {
-    background-color: steelblue;
+.h-100{
+    background-image: url("https://www.treehugger.com/thmb/7RyCPEXpew7Gar7Pd5Jm1tj-9fY=/3200x3200/smart/filters:no_upscale()/__opt__aboutcom__coeus__resources__content_migration__mnn__images__2019__06__beach-sunset-oak-bluffs-marthas-vineyard-ma-1fbc67399cbf4031921368c41d9bb52f.jpg");
 }
+
 
 
 .intro{
@@ -61,6 +59,17 @@ input[id=firstpage]{
 }
 
 //  ---------------------------------------------------------login----------------------------------------------------------------------
+.userLogin{
+    margin-top: 130px;
+    // background-color: steelblue;
+    width: 850px;
+}
+
+.loginRight{
+    border: 2px solid black;
+    width: 100%;
+   
+}
 // ---------------------email------------------------
 .email{
     position: relative;
@@ -137,4 +146,24 @@ input[id=userincome]{
 // ---------------------income------------------------
 
  
-// ----------------------------------------------------login----------------------------------------------------------------------------
+// ----------------------------------------------------login*************************************************************
+ 
+ .imgdiv{
+    
+    width: 800px;
+    border: 2px solid black;
+   
+}
+   
+
+
+
+ #loginImg{
+     height: 100%;
+     width: 100%;
+ }
+
+
+ //  <img src="https://www.nevistas.com/ul/4/2019/08/29/13.jpg" />
+
+ 
