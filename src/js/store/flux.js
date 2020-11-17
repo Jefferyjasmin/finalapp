@@ -2,6 +2,7 @@ const getState = ({ getStore, getActions, setStore }) => {
 	return {
 		store: {
 			apiBaseUrl: "https://3000-e4d0fe23-793c-4bec-96ad-382f1171d5ec.ws-us02.gitpod.io/",
+			birthDay: 0,
 			id: "",
 			userName: "",
 			email: "",
