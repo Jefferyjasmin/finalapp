@@ -14,6 +14,7 @@ import Expense from "./component/expense";
 import { Navbar } from "./component/navbar";
 import { Footer } from "./component/footer";
 import Travel from "./views/travel";
+import Chart from "./component/chart";
 import Login from "./component/login";
 import Firstpage from "./views/firstpage";
 //create your first component
@@ -44,6 +45,10 @@ const Layout = () => {
 						<Route exact path="/expense">
 							<Expense />
 						</Route>
+						<Route exact path="/chart">
+							<Chart />
+						</Route>
+
 						<Route exact path="/travel">
 							<div className="travelImg">
 								<img
