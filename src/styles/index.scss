@@ -21,7 +21,10 @@
     
 }
     
-    
+#footerImg{
+     height: 30px;
+}
+
 
 
 
@@ -55,96 +58,11 @@ input[id=firstpage]{
     justify-content: center
 }
 
-//  ---------------------------------------------------------login----------------------------------------------------------------------
-.userLogin{
-    margin-top: 130px;
-    // background-color: steelblue;
- 
+//  ---------------------------------------------------------Login----------------------------------------------------------------------
+.loginForm{
+    margin-left: 84px;
 }
-
-.loginRight{
-    border: 2px solid black;
-    width: 100%;
-   
-}
-// ---------------------email------------------------
-.email{
-    position: relative;
-}
-
-
-input[id=staticEmail]{
-    padding-left: 30px;
-    margin-left: 50px;
-    border-radius: 5px;
-}
-
-
-.email i{
-    position: absolute;
-    left: 95px;
-    right: 30;
-    top: 7px;
-    // transition: 2s;
-
-}
-
-// .email input[id=staticEmail]:focus + i{
-//     color:dodgerblue;
-// }
-
-// ---------------------email------------------------
-// ---------------------user------------------------
-.user{
-    position: relative;
-}
-
-
-input[id=userName]{
-    padding-left: 25px;
-    margin-left: 2px;
-    border-radius: 5px;
-}
-
-
-.user i{
-    position: absolute;
-    left: 96px;
-    right: 30;
-    top: 7px;
-
-}
-// ---------------------user------------------------
-// ---------------------income------------------------
-
-.incomeField{
-    position: relative;
-    
-}
-
-
-input[id=userincome]{
-    padding-left: 20px;
-    width: 200px;
-    height: 27px;
-    margin-left: 35px;
-
-
-}
-
-
-.incomeField i{
-    position: absolute;
-    left: 93px;
-    right: 30;
-    top: 7px;
-
-}
-// ---------------------income------------------------
-
- 
-// ----------------------------------------------------login*************************************************************
- 
+// ---------------------------------------------------------ImG--------------------------------------------------------------------------
  .imgdiv{
     
     width: 800px;
@@ -159,11 +77,112 @@ input[id=userincome]{
      height: 100%;
      width: 100%;
  }
+// ------------------------------------------------------------------------------
+
+.userLogin{
+    height: 100%;
+    width: 100%;
+    // background-color: steelblue;
+ 
+}
+
+.container{
+    margin-top: 130px;
+}
+
+.loginRight{
+    border: 2px solid black;
+    width: 100%;
+   
+}
+
+.loginRight h1{
+    text-align: center;
+    font-size: 1.5rem;
+    margin-top: 39px;
+    margin-bottom: 43px;
+}
+// ---------------------email------------------------
+.sUser{
+    position: absolute;
+    margin-top: 32px;
+    margin-left: 48px;
+}
+
+#staticEmail{
+   
+    margin-left: 129px;
+    width: 300px;
+    padding-left: 15px;
+
+}
+
+.sEmail{
+    position: absolute;
+  
+    margin-left: 97px;
+}
+
+#Email{
+    position: absolute;
+    margin-left: 20px;
+}
+// ---------------------email------------------------
+// ---------------------user------------------------
+.userdiv{
+    margin-bottom: 34px;
+}
+.sUser{
+   
+    margin-top: 8px;
+     position: absolute;
+    
+    margin-left: 100px;
+}
+
+#userName{
+    width: 100px;
+    margin-top: 9px;
+    margin-left: 15px;
+    height: 30px;
+}
+
+#userName1{
+    height: 30px;
+    width: 331px;
+    margin-top: 8px;
+    padding-left: 55px;
+    margin-left: -15px;
+}
+// ---------------------user------------------------
+// ---------------------income------------------------
+.incomeField{
+    margin-top: 39px;
+}
+
+#labelincome{
+    position: absolute;
+    margin-left: 15px;
+    margin-top: 5px;
+    
+
+}
+
+.sIncome{
+    margin-left: 96px;
+}
+
+#userincome{
+    width: 300px;
+    height: 30px;
+}
 
 
- //  <img src="https://www.nevistas.com/ul/4/2019/08/29/13.jpg" />
-
- .ser2{
-    padding-left: 20px;
-    width: 200px;
- }
+// ---------------------income------------------------
+.submitButtion{
+    position: absolute;
+    margin-top: 82px;
+    margin-left: 250px;
+}
+// ----------------------------------------------------login*************************************************************
+ 
