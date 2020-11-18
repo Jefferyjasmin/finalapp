@@ -50,13 +50,6 @@ const Layout = () => {
 						</Route>
 
 						<Route exact path="/travel">
-							<div className="travelImg">
-								<img
-									id="img"
-									src="https://www.sciencemag.org/sites/default/files/styles/article_main_large/public/planetakeoff.jpg?itok=LTe3sYMJ"
-									atl="Plane"
-								/>
-							</div>
 							<Travel />
 						</Route>
 
