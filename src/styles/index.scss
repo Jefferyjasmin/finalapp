@@ -194,20 +194,25 @@ input[id=firstpage]{
     background-image: url("https://c8.alamy.com/comp/R44591/city-of-nice-by-night-in-france-beach-and-promenade-view-to-castle-hill-french-riviera-cote-dazur-picturesque-coastline-R44591.jpg");  
     background-repeat: no-repeat;
     height: 88%;
-    margin-left: 110px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 85%;
     // opacity: 0.4;
 
 }
-
+.travelItem1{
+    display: block;
+    margin-top: 150px;
+    margin-left: auto;
+    margin-right: auto;
+    width: 85%;
+}
 
 .travelBox{
-    border: 2px solid black;
-    background-color: black;
-    height: 80px;
-    width: 450px;
-    position: absolute;
-    margin-top: 15%;
-    margin-left: 26%;
+    
+    opacity: 0.8;
+    width:inherit;
 }
 
 // -------------------------------------------------TRAVEL-------------------------------------------------------
