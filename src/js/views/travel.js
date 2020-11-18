@@ -4,7 +4,7 @@ const Travel = () => {
 		<div className="travelContainer ">
 			<div className="travelBox">
 				<div className="travelItem1">
-					<h1>Enjoy your trip you earned it </h1>
+					<h4 style={{ color: "white" }}>Enjoy your trip </h4>
 					<div className="departureDate" style={{ backgroundColor: "white" }}>
 						<table className="table table-dark" style={{ backgroundColor: "none" }}>
 							<thead>
