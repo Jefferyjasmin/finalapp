@@ -86,12 +86,11 @@ const Login = () => {
 							</div>
 						</div>
 					</form>
-					{/* <Link to="/home"> */}
 					<button
 						className="submitButtion"
 						type="button"
 						onClick={async () => {
-							let success = await actions.update(userName, email, parseInt(income));
+							let success = await actions.update(userName, email, income);
 							if (success) {
 								history.push("/home");
 							} else {
@@ -101,8 +100,6 @@ const Login = () => {
 						{" "}
 						Submit
 					</button>
-
-					{/* </Link> */}
 				</div>
 			</div>
 		</div>
