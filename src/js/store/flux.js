@@ -8,7 +8,8 @@ const getState = ({ getStore, getActions, setStore }) => {
 			email: "",
 			mStatement: [],
 			income: 0,
-			expenses: [{ property: "car payment", value: 196 }, { property: "payment Rent", value: 1000 }]
+			expenses: [{ property: "car payment", value: 196 }, { property: "payment Rent", value: 1000 }],
+			Data: []
 		},
 		actions: {
 			sum: () => {
@@ -29,6 +30,7 @@ const getState = ({ getStore, getActions, setStore }) => {
 				let weekly = 0;
 				for (let i = 0; i <= 26; i++) {
 					weekly += store.income;
+					store.Data.push(weekly);
 				}
 				return weekly;
 			},
@@ -39,6 +41,7 @@ const getState = ({ getStore, getActions, setStore }) => {
 				let monthly = 0;
 				for (let i = 0; i <= 12; i++) {
 					monthly += store.income * 2;
+					store.Data.push(monthly);
 					// store.mStatement.push(monthly);
 				}
 				// setStore({ mStatement: store.mStatement });

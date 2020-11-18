@@ -22,7 +22,7 @@ const NewChart = () => {
 	return (
 		<div className="chartContainer">
 			<div style={{ height: "500px", width: "500px" }}>
-				<Line
+				<Bar
 					data={chartData}
 					options={{
 						responsive: true
