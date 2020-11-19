@@ -2,35 +2,9 @@ import { Context } from "../store/appContext";
 import React, { Component, useState, useEffect, useContext } from "react";
 import { Bar, Line, Pie } from "react-chartjs-2";
 
-// const Weekly_Report = () => {
-// 	const { store, actions } = useContext(Context);
-// 	let current = store.income - actions.sum();
-// 	let weekly = actions.weeklyStatement();
-// 	return (
-// 		<div>
-// 			<div>
-// 				<h1>Your weekly report</h1>
-// 			</div>
-// 			<div>
-// 				<p>you have {current}</p>
-// 				<div>
-// 					<h1> {weekly}</h1>
-
-// 					<b>chart showing how user is doing </b>
-// 				</div>
-// 				<p>
-// 					<b> second value </b>
-// 				</p>
-// 			</div>
-// 		</div>
-// 	);
-// };
-
-// import React, { Component, useState, useEffect } from "react";
-// import { Bar, Line, Pie } from "react-chartjs-2";
-
 const Weekly_Report = () => {
 	const { store, actions } = useContext(Context);
+	const [data, setData] = useState([...store.expenses.map(item => item.value)]);
 	let current = store.income - actions.sum();
 	let weekly = actions.weeklyStatement();
 	const [chartData, setChartData] = useState({});
@@ -40,7 +14,7 @@ const Weekly_Report = () => {
 			datasets: [
 				{
 					label: "MY first Chart",
-					data: [40, 62, 82, 92, 100, 120, 130],
+					data: [...data],
 					backgroundColor: [
 						"rgb(255,255,255,1)",
 						"rgb(255,255,0,0.1)",

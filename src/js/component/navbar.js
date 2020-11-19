@@ -16,7 +16,7 @@ export const Navbar = () => {
 			<div className="ml-auto">
 				<Link to="/annual">Annually Report</Link>
 			</div>
-			<div className="ml-auto">
+			<div className="ml-auto mr-7">
 				<Link to="/travel">Travel</Link>
 			</div>
 		</nav>

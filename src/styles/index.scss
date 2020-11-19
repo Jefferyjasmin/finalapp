@@ -11,16 +11,7 @@
 
 
 
-.intro{
-    
-    background-image: url("https://savvytokyo.scdn3.secure.raxcdn.com/app/uploads/2019/10/Argentum-Wealth-Financial-Advisement-790x445.jpg");
-    height: 300px;
-    width: 100%;
-    background-repeat: no-repeat;
-    margin-left: 335px;
-    
-}
-    
+ 
 #footerImg{
      height: 30px;
 }
@@ -50,13 +41,31 @@ input[id=firstpage]{
     
 }
 
- 
+//  ----------------------------------------------------------firstpayge---------------------------------------------------------------------
+.firstPageBody{
+    display: flex;
+    height: 800px;
+    width: 100%;
+    background-image: url("https://savvytokyo.scdn3.secure.raxcdn.com/app/uploads/2019/10/Argentum-Wealth-Financial-Advisement-790x445.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    
+}
 
-.expense{
+.firstPageRight{
+    border: 2px solid black;
+
+}
+.firstPageLeft{
+    flex-direction: column;
+ 
+ .firstPageInputFields{
+    border: 2px solid black;
+    background-color: gray;
     display: flex;
     flex-direction: column;
-    justify-content: center
 }
+ }
 
 //  ---------------------------------------------------------Login----------------------------------------------------------------------
 .loginForm{
@@ -193,8 +202,9 @@ input[id=firstpage]{
 
 // -------------------------------------------------TRAVEL-------------------------------------------------------
 .travelContainer{
-    background-image: url("https://c8.alamy.com/comp/R44591/city-of-nice-by-night-in-france-beach-and-promenade-view-to-castle-hill-french-riviera-cote-dazur-picturesque-coastline-R44591.jpg");  
+    background-image: url("https://images.pexels.com/photos/1154498/pexels-photo-1154498.jpeg?auto=compress&cs=tinysrgb&h=750&w=1260");  
     background-repeat: no-repeat;
+    background-size:cover;
     height: 88%;
     display: block;
     margin-left: auto;
@@ -213,10 +223,51 @@ input[id=firstpage]{
 
 .travelBox{
     
-    margin-top: 250px;
-    
+    margin-top: 300px;
+    margin-left: 94px;
     opacity: 0.8;
     width:inherit;
 }
 
 // -------------------------------------------------TRAVEL-------------------------------------------------------
+
+
+
+
+
+// ----------------------------------------------------------------EXPENSE--------------------------------------------
+
+.expense{
+    display: flex;
+    flex-direction: column;
+    height: 90%;
+    
+}
+
+.expenseContainer{
+    height: 95%;
+    widows: 82%;
+}
+
+.inputField{
+    height: 90%;
+    border: 2px solid   black;
+}
+
+.left{
+    background-color: gray;
+    height: 90%;
+    border: 2px solid   black;
+}
+
+.leftName{
+    border: 2px solid   black;
+    height: 25%;
+}
+
+.leftBalance{
+    border: 2px solid   black;
+    height: 25%;
+}
+
+

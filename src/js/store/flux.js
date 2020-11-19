@@ -1,14 +1,19 @@
 const getState = ({ getStore, getActions, setStore }) => {
 	return {
 		store: {
-			apiBaseUrl: "https://3000-e4d0fe23-793c-4bec-96ad-382f1171d5ec.ws-us02.gitpod.io/",
+			apiBaseUrl: "https://3000-b93f76d5-20d7-4a62-a980-ac6e67c8e72a.ws-us02.gitpod.io/",
+
 			birthDay: 0,
 			id: "",
 			userName: "",
 			email: "",
 			mStatement: [],
 			income: 0,
-			expenses: [{ property: "car payment", value: 196 }, { property: "payment Rent", value: 1000 }],
+			expenses: [
+				{ property: "car payment", value: 196 },
+				{ property: "payment Rent", value: 1000 },
+				{ property: " Rent", value: 1000 }
+			],
 			Data: []
 		},
 		actions: {
@@ -57,7 +62,8 @@ const getState = ({ getStore, getActions, setStore }) => {
 						body: JSON.stringify({
 							userName: userName,
 							email: email,
-							income: income
+							income: income,
+							is_active: true
 						}),
 						headers: {
 							"Content-Type": "application/json"
@@ -88,13 +94,58 @@ const getState = ({ getStore, getActions, setStore }) => {
 			},
 
 			addExpense: array => {
-				let store = getStore();
+				// let store = getStore();
 
-				let newArray = store.expenses.concat(array);
-
-				setStore({ expenses: newArray });
+				// let newArray = store.expenses.concat(array);
+				// console.log(array);
+				setStore({ expenses: array });
 			},
-			deleteItem: index => {}
+			deleteItem: index => {
+				const store = getStore();
+
+				const { expenses } = store;
+				expenses.splice(index, 1);
+				setStore({ expenses: expenses });
+				// let url = store.apiBaseUrl + "expense/" + id;
+				// console.log(url);
+				// try {
+				// 	let response = await fetch(url, {
+				// 		method: "DELETE",
+
+				// 		headers: {
+				// 			"Content-Type": "application/json"
+				// 		}
+				// 	});
+				// 	if (response.ok) {
+				// 		let expenses = await response.json();
+				// 		setStore({
+				// 			expenses: expenses
+				// 		});
+				// 		return true;
+				// 	}
+				// } catch (error) {
+				// 	console.log(`this is the error: ${typeof error} ${error.message}`);
+				// }
+				// return false;
+			},
+			testApi: () => {
+				fetch(
+					"https://trip-purpose-prediction2.p.rapidapi.com/travel/predictions/trip-purpose?departureDate=undefined&originLocationCode=undefined&returnDate=undefined&destinationLocationCode=undefined",
+					{
+						method: "GET",
+						headers: {
+							"x-rapidapi-key": "3a1a1304c7msh4d39eef63c535d1p13d990jsn8d99f5062119",
+							"x-rapidapi-host": "trip-purpose-prediction2.p.rapidapi.com"
+						}
+					}
+				)
+					.then(response => {
+						console.log(response);
+					})
+					.catch(err => {
+						console.error(err);
+					});
+			}
 		}
 	};
 };

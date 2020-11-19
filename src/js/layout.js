@@ -35,8 +35,6 @@ const Layout = () => {
 						</Route>
 
 						<Route exact path="/home">
-							<div className="intro" />
-
 							<Home />
 						</Route>
 						<Route exact path="/secondpage">
