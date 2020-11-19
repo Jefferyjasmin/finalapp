@@ -58,15 +58,28 @@ input[id=firstpage]{
 }
 .firstPageLeft{
     flex-direction: column;
- 
+}
  .firstPageInputFields{
     border: 2px solid black;
     background-color: gray;
     display: flex;
-    flex-direction: column;
+    justify-content: space-around;
+    margin-bottom: 50px;
+    margin-top: 50px;
 }
- }
 
+ 
+.idk{
+    border-radius: 10px;
+    margin-left: 10px;
+    border: 2px sold #aaa
+
+}
+
+#growSavings :focus{
+    border-color : brown;
+
+}
 //  ---------------------------------------------------------Login----------------------------------------------------------------------
 .loginForm{
     margin-left: 84px;

@@ -6,8 +6,9 @@ import { Context } from "../store/appContext";
 const Firstpage = () => {
 	const [income, setIncome] = useState(0);
 	const { store, actions } = useContext(Context);
-
 	const [show, setShow] = useState({ growSavings: false, payOffDebt: false });
+	const [display, setDisplay] = useState(false);
+	const [goal, setGoal] = useState(0);
 
 	return (
 		<div className="firstPageBody row">
@@ -29,7 +30,7 @@ const Firstpage = () => {
 							}}
 						/>
 					</span>
-					<span id="checkbox" style={{ color: "black" }}>
+					<span id="checkbox" style={{ color: "white" }}>
 						Pay of debt
 						<input
 							className="payOffDebt"
@@ -47,28 +48,38 @@ const Firstpage = () => {
 				</div>
 				<div>
 					{show.growSavings ? (
-						<span>
+						<span className="growSavings" style={{ color: "white" }}>
 							How much do you want to add
 							<input
 								className="idk"
 								id="growSavings"
 								type="number"
 								aria-label="Checkbox for following text input"
-								style={{ backgroundColor: "white" }}
+								value={goal}
+								style={{ backgroundColor: "wheat" }}
+								onChange={e => {
+									setGoal(e.target.value);
+									console.log(e.target.value);
+								}}
 							/>
 						</span>
 					) : (
 						" "
 					)}
 					{show.payOffDebt ? (
-						<span>
+						<span className="debt" style={{ color: "white" }}>
 							How much we need to pay off
 							<input
 								className="idk"
 								id="growSavings"
 								type="number"
+								value={goal}
 								aria-label="Checkbox for following text input"
-								style={{ backgroundColor: "white" }}
+								style={{ backgroundColor: "wheat" }}
+								onChange={e => {
+									setGoal(e.target.value);
+									console.log(e.target.value);
+								}}
 							/>
 						</span>
 					) : (
