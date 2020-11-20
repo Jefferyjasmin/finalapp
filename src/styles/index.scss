@@ -115,7 +115,9 @@ input[id=firstpage]{
 .userLogin{
     height: 100%;
     width: 100%;
-    // background-color: steelblue;
+    background-image: url("http://mobileimages.lowes.com/product/converted/823951/823951023863.jpg?size=pdhi");
+    background-repeat: no-repeat;
+    background-size: cover;
  
 }
 
@@ -261,6 +263,7 @@ input[id=firstpage]{
 
 // ----------------------------------------------------------------EXPENSE--------------------------------------------
 
+
 .expense{
     display: flex;
     flex-direction: column;
@@ -268,9 +271,18 @@ input[id=firstpage]{
     
 }
 
+.enterExpense{
+    border-bottom: 2px solid   black;
+    margin-bottom: 20px;
+}
+
 .expenseContainer{
     height: 95%;
-    widows: 82%;
+   
+    background-image: url("https://savvytokyo.scdn3.secure.raxcdn.com/app/uploads/2019/10/Argentum-Wealth-Financial-Advisement-790x445.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    
     
 }
 
@@ -278,6 +290,7 @@ input[id=firstpage]{
     display: flex;
     flex-direction: column;
     justify-content: space-around;
+  
 }
 
 .inputField{
@@ -286,18 +299,24 @@ input[id=firstpage]{
 }
 
 .left{
-    background-color: gray;
-    height: 90%;
-    border: 2px solid   black;
+    background-color: wheat;
+    border: 1px solid   black;
+    margin-left: 517px;
+     
 }
 
 .leftName{
-    border: 2px solid   black;
-    height: 25%;
+    text-align: center;
+    margin-top: 40px;
+    height: 144px;
+}
+
+.userExpense{
+    margin-bottom: 17px;
 }
 
 .leftBalance{
-    border: 2px solid   black;
+text-align: center;
     height: 25%;
 }
 
