@@ -1,5 +1,5 @@
 import React, { useState, useContext } from "react";
-import { Link } from "react-router-dom";
+import { Link, withRouter } from "react-router-dom";
 import No_name from "../component/function";
 import PropTypes, { number } from "prop-types";
 import { Context } from "../store/appContext";
@@ -49,7 +49,7 @@ const Firstpage = () => {
 				<div>
 					{show.growSavings ? (
 						<span className="growSavings" style={{ color: "white" }}>
-							How much do you want to add
+							How much we need to pay off
 							<input
 								className="idk"
 								id="growSavings"
@@ -62,13 +62,16 @@ const Firstpage = () => {
 									console.log(e.target.value);
 								}}
 							/>
+							<button type="button" className="firstPage btn btn-danger">
+								<i className="fas fa-check" />
+							</button>
 						</span>
 					) : (
 						" "
 					)}
 					{show.payOffDebt ? (
 						<span className="debt" style={{ color: "white" }}>
-							How much we need to pay off
+							<b>How much we need to pay off</b>
 							<input
 								className="idk"
 								id="growSavings"
@@ -81,16 +84,21 @@ const Firstpage = () => {
 									console.log(e.target.value);
 								}}
 							/>
+							<button type="button" className="firstPage btn btn-danger">
+								<i className="fas fa-check" />
+							</button>
 						</span>
 					) : (
 						""
 					)}
-					<form action="/action_page.php">
-						<label htmlFor="birthday">BY what date would you want your goal meet</label>
-						<input type="date" id="birthday" name="birthday" />
-						<input type="submit" onClick={() => console.log("show the debt portion")} />
-					</form>
 				</div>
+				<form className="firstPageForm" action="/action_page.php">
+					<label id="firstPageSubmit" htmlFor="birthday" style={{ color: "white" }}>
+						<b>BY what date would you want your goal meet</b>
+					</label>
+					<input id="dateInput" type="date" name="birthday" style={{ backgroundColor: "wheat" }} />
+					<input type="submit" onClick={() => console.log("show the debt portion")} />
+				</form>
 			</div>
 			<div className="firstPageRight col-3" style={{ backgroundColor: "wheat" }}>
 				<div className="expense1 ">
