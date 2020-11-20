@@ -292,7 +292,9 @@ input[id=firstpage]{
     justify-content: space-around;
   
 }
-
+.expenseSave{
+    margin-top: 20px;
+}
 .inputField{
     height: 90%;
     border: 2px solid   black;
@@ -321,3 +323,14 @@ text-align: center;
 }
 
 
+// _____________________________________________________________________________SecondPage_________________________________-______________
+.reportInfoSp{
+    display: flex;
+    flex-direction: column;
+    width:356px;
+}
+
+ 
+
+
+// _____________________________________________________________________________SecondPage_________________________________-______________

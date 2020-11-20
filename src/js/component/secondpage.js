@@ -12,29 +12,42 @@ const MyPlan = () => {
 	};
 
 	return (
-		<div className="container">
-			<div>
-				<h1>Great Job </h1>
-				<h4>Here is what we need to know to get you started</h4>
-			</div>
+		<div className="containerSp">
+			<h1>Great Job </h1>
+			<div className="bothSidesSp row">
+				<div className="leftSp">
+					<div>
+						<h4> current report</h4>
+					</div>
 
-			<div className="inputFields">
-				{store.expenses.map((item, index) => {
-					return (
-						<>
-							<label>{item.property}</label>
-							<input
-								id="expenses"
-								type="number"
-								placeholder="let add up you expenses"
-								value={item.value}
-							/>
-						</>
-					);
-				})}
-				-------------------------------------------YOur total expenses are {store.income - actions.sum()} a
-				month great
-				{/*need to store the values of each input */}
+					<div className="reportInfoSp">
+						{store.expenses.map((item, index) => {
+							return (
+								<>
+									<button>
+										{item.property}
+										<input
+											id="expenses"
+											type="number"
+											placeholder="let add up you expenses"
+											value={item.value}
+										/>
+									</button>
+								</>
+							);
+						})}
+						{store.income - actions.sum()}
+					</div>
+				</div>
+				<div className="rightSp">
+					{store.userName} jeffery jasmin
+					<br />
+					This budgets goal {store.goal}
+					<br />
+					Desired goal date {store.date}
+					<br />
+					estimated goal date {store.date}
+				</div>
 			</div>
 			<div>
 				<Link to="/travel">

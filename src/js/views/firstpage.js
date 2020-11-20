@@ -107,10 +107,6 @@ const Firstpage = () => {
 							style={{ backgroundColor: "wheat" }}
 							onChange={e => setDate(e.target.value)}
 						/>
-
-						<button className="fPsubmit btn-dark" onClick={() => action.getDate(date, goal)}>
-							Submit
-						</button>
 					</form>
 				) : null}
 			</div>
@@ -133,7 +129,9 @@ const Firstpage = () => {
 				</div>
 				<div>
 					<Link to="/expense" className="btn btn-dark">
-						<button className="btn btn-dark">Enter</button>
+						<button className="btn btn-dark" onClick={() => actions.getDate(date, goal)}>
+							Enter
+						</button>
 					</Link>
 				</div>
 			</div>

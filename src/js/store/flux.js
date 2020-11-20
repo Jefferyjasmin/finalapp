@@ -1,7 +1,7 @@
 const getState = ({ getStore, getActions, setStore }) => {
 	return {
 		store: {
-			apiBaseUrl: "https://3000-b93f76d5-20d7-4a62-a980-ac6e67c8e72a.ws-us02.gitpod.io/",
+			apiBaseUrl: "https://3000-e692a131-8447-440a-a482-cd0ff2cd3f2e.ws-us02.gitpod.io/",
 			date: 0,
 			goal: 0,
 			birthDay: 0,
@@ -86,9 +86,8 @@ const getState = ({ getStore, getActions, setStore }) => {
 				return false;
 			},
 			getDate: (date, goal) => {
-				const store = getStore();
 				setStore({ date: date, goal: goal });
-				return date;
+				return date, goal;
 			},
 
 			annualStatemen: () => {

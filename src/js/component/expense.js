@@ -82,7 +82,9 @@ const Expense = () => {
 								);
 							})}
 							<Link to="/secondpage">
-								<button className="btn btn-ligh" onClick={() => actions.addExpense(newExpenses)}>
+								<button
+									className="expenseSave btn btn-light"
+									onClick={() => actions.addExpense(newExpenses)}>
 									save
 								</button>
 							</Link>
