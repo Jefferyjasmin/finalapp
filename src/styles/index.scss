@@ -271,6 +271,13 @@ input[id=firstpage]{
 .expenseContainer{
     height: 95%;
     widows: 82%;
+    
+}
+
+.expenseContainer1{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
 }
 
 .inputField{

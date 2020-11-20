@@ -2,7 +2,8 @@ const getState = ({ getStore, getActions, setStore }) => {
 	return {
 		store: {
 			apiBaseUrl: "https://3000-b93f76d5-20d7-4a62-a980-ac6e67c8e72a.ws-us02.gitpod.io/",
-
+			date: 0,
+			goal: 0,
 			birthDay: 0,
 			id: "",
 			userName: "",
@@ -83,6 +84,11 @@ const getState = ({ getStore, getActions, setStore }) => {
 					console.log(`this is the error: ${typeof error} ${error.message}`);
 				}
 				return false;
+			},
+			getDate: (date, goal) => {
+				const store = getStore();
+				setStore({ date: date, goal: goal });
+				return date;
 			},
 
 			annualStatemen: () => {

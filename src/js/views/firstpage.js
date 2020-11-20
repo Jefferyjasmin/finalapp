@@ -8,6 +8,8 @@ const Firstpage = () => {
 	const { store, actions } = useContext(Context);
 	const [show, setShow] = useState({ growSavings: false, payOffDebt: false });
 	const [display, setDisplay] = useState(false);
+	const [date, setDate] = useState();
+
 	const [goal, setGoal] = useState(0);
 
 	return (
@@ -62,7 +64,7 @@ const Firstpage = () => {
 									console.log(e.target.value);
 								}}
 							/>
-							<button type="button" className="firstPage btn btn-danger">
+							<button type="button" className="firstPage btn btn-danger" onClick={() => setDisplay(true)}>
 								<i className="fas fa-check" />
 							</button>
 						</span>
@@ -85,20 +87,32 @@ const Firstpage = () => {
 								}}
 							/>
 							<button type="button" className="firstPage btn btn-danger">
-								<i className="fas fa-check" />
+								<i className="fas fa-check" onClick={() => setDisplay(true)} />
 							</button>
 						</span>
 					) : (
 						""
 					)}
 				</div>
-				<form className="firstPageForm" action="/action_page.php">
-					<label id="firstPageSubmit" htmlFor="birthday" style={{ color: "white" }}>
-						<b>BY what date would you want your goal meet</b>
-					</label>
-					<input id="dateInput" type="date" name="birthday" style={{ backgroundColor: "wheat" }} />
-					<input type="submit" onClick={() => console.log("show the debt portion")} />
-				</form>
+				{display ? (
+					<form className="firstPageForm" action="/action_page.php">
+						<label id="firstPageSubmit" htmlFor="birthday" style={{ color: "white" }}>
+							<b>BY what date would you want your goal meet</b>
+						</label>
+						<input
+							id="dateInput"
+							type="date"
+							name="birthday"
+							value={date}
+							style={{ backgroundColor: "wheat" }}
+							onChange={e => setDate(e.target.value)}
+						/>
+
+						<button className="fPsubmit btn-dark" onClick={() => action.getDate(date, goal)}>
+							Submit
+						</button>
+					</form>
+				) : null}
 			</div>
 			<div className="firstPageRight col-3" style={{ backgroundColor: "wheat" }}>
 				<div className="expense1 ">

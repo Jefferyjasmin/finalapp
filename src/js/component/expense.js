@@ -24,11 +24,14 @@ const Expense = () => {
 		<div className="expense ">
 			<div className="expenseContainer d-flex row">
 				<div className="left col-3">
-					<div className="leftName">{store.userName}</div>
+					<div className="leftName">
+						{store.userName}
+						User Names
+					</div>
 					<div className="leftBalance">current balance updating</div>
 				</div>
 				<div className="inputField col-9">
-					<div className="expenseContainer">
+					<div className="expenseContainer1">
 						<label> Enter your expenses</label>
 						<input
 							type="text"
@@ -46,34 +49,35 @@ const Expense = () => {
 							onChange={e => setValue(parseInt(e.target.value))}
 							//  store.expenses.value: e.target.value
 						/>
-					</div>
-					<button
-						className="enterExpense"
-						onClick={() => {
-							const newExp = [...store.expenses];
-							newExp.push({ property: expense, value: value });
-							console.log({ property: expense, value: value });
-							actions.addExpense(newExp);
-							// setNewExpenses(newExpenses.concat({ property: expense, value: value }));
-							// setExpense("");
-							// setValue(0);
-						}}>
-						Enter
-					</button>
+						<button
+							className="enterExpense"
+							onClick={() => {
+								const newExp = [...store.expenses];
+								newExp.push({ property: expense, value: value });
+								actions.addExpense(newExp);
+								setExpense("");
+								setValue(0);
+							}}>
+							Enter
+						</button>
 
-					{store.expenses.map((item, index) => {
-						console.log(item);
-						return (
-							<li id="mapli" key={index}>
-								<b>{item.property}</b> {"   "} <b>{item.value}</b>
-								{"    "}
-								{"    "}
-								<button className="btn" type="submit" onClick={() => actions.deleteItem(index)}>
-									{"    "} <i className="fas fa-trash-alt" />
-								</button>
-							</li>
-						);
-					})}
+						{store.expenses.map((item, index) => {
+							console.log(item);
+							return (
+								<>
+									<span id="mapli" key={index}>
+										<b>{item.property}</b>
+									</span>
+									<span>
+										<b>{item.value}</b>
+										<button className="btn" type="submit" onClick={() => actions.deleteItem(index)}>
+											{"    "} <i className="fas fa-trash-alt" />
+										</button>
+									</span>
+								</>
+							);
+						})}
+					</div>
 
 					{/* <Link to="/secondpage">
 						<button onClick={() => actions.addExpense(newExpenses)}>save</button>
